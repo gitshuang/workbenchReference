@@ -1,0 +1,55 @@
+.nc-workbench-page .nc-workbench-menuitem {
+    overflow: hidden;
+    .nc-workbench-ownpage-left {
+        .menuitem-tree-search {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .fixed-search-input {
+                padding: 15px 20px;
+                width: 100%;
+                display: flex;
+                background-color: #ffffff;
+                .ant-input-affix-wrapper {
+                    width: 240px;
+                    .ant-input-suffix {
+                        .fixed-search-icon-group {
+                            .iconfont {
+                                font-size: 18px;
+                                display: inline-block;
+                            }
+                            .icon-qingkong {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .ant-input-suffix {
+                            .fixed-search-icon-group {
+                                .iconfont {
+                                    color: rgba(0, 0, 0, 0.65);
+                                    font-size: 18px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tree-content{
+                flex: 1;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .nc-workbench-menuitem-form {
+        padding: 16px 10px;
+        min-width: 300px;
+        .ant-form {
+            padding: 24px;
+            background: #fbfbfb;
+            border-radius: 6px;
+        }
+    }
+}

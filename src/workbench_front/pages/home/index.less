@@ -1,0 +1,150 @@
+.nc-workbench-home-page {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url("~Assets/images/light-final-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; //背景图片基于容器大小铺满屏幕不会压缩图片
+}
+.nc-workbench-home-container {
+    margin-top: -30px;
+    .nc-workbench-app-container {
+        position: relative;
+        &:last-child {
+            padding-bottom: calc(100vh - 265px);
+        }
+    }
+    .title {
+        font-size: 1rem;
+        height: 40px;
+        line-height: 40px;
+        user-select: none;
+        padding: 0 10px;
+    }
+    .widget-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .text {
+        font-size: 24px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 24px;
+    }
+    .grid-item {
+        position: absolute;
+        background: #ffffff;
+        transition: all 0.2s ease-out;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px 0 rgba(74, 81, 93, 0.1);
+        .license-msg {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .app-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 3px;
+        cursor: pointer;
+        .app-content {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .icon {
+            width: 82px;
+            height: 82px;
+            overflow: hidden;
+        }
+        .icon-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        .app-item_title {
+            font-size: 16px;
+            line-height: 25px;
+            padding: 10px;
+            transition: all 100ms linear;
+            color: #111;
+        }
+        &:hover {
+            box-shadow: 0 1px 10px rgba(74, 81, 93, 0.7);
+            background: #ffffff;
+        }
+    }
+}
+.nc-workbench-home-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e4e4e4;
+    .empty-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #e4e4e4;
+        .empty-img {
+            margin-top: 51px;
+        }
+        h1 {
+            font-size: 33px;
+            font-weight: initial;
+            color: #0f0f0f;
+        }
+        p {
+            font-size: 15px;
+            color: #555555;
+        }
+        .empty-btn {
+            margin-top: 28px;
+            .ant-btn {
+                background: #e73d36;
+                color: #ffffff;
+                font-size: 16px;
+                height: 38px;
+                line-height: 35px;
+                min-width: 150px;
+            }
+        }
+        ul {
+            margin-top: 34px;
+            li {
+                color: #525252;
+                font-size: 15px;
+                margin-top: 16px;
+                span {
+                    color: #525252;
+                    font-size: 15px;
+                    background: #ffffff;
+                    padding: 5px;
+                    cursor: pointer;
+                    .iconfont {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

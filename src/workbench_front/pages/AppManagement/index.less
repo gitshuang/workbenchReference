@@ -1,0 +1,107 @@
+.nc-workbench-page .nc-workbench-appRegister {
+    overflow: hidden;
+    .nc-workbench-ownpage-left {
+        .appRegister-searchTree {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .fixed-search-input {
+                padding: 15px 20px;
+                width: 100%;
+                display: flex;
+                background-color: #ffffff;
+                .ant-input-affix-wrapper {
+                    width: 240px;
+                    .ant-input-suffix {
+                        .fixed-search-icon-group {
+                            .iconfont {
+                                font-size: 18px;
+                                display: inline-block;
+                            }
+                            .icon-qingkong {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .ant-input-suffix {
+                            .fixed-search-icon-group {
+                                .iconfont {
+                                    color: rgba(0, 0, 0, 0.65);
+                                    font-size: 18px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tree-content{
+                flex: 1;
+                padding: 0 20px;
+            }
+        }
+    }
+    .nc-workbench-ownpage-right {
+        padding: 20px;
+        .ant-form {
+            padding: 24px;
+            background: #fbfbfb;
+            border-radius: 6px;
+            .ant-checkbox-wrapper {
+                margin-left: 90px;
+                .ant-checkbox + span,
+                .ant-checkbox-wrapper + span {
+                    padding-left: 16px;
+                    padding-right: 8px;
+                }
+            }
+        }
+        .ant-form-item-control-wrapper {
+            flex: 1;
+        }
+        .ant-form-item {
+            margin-bottom: 16px;
+        }
+        .ant-form-item-with-help {
+            margin-bottom: 0;
+        }
+        .ant-form-explain {
+            font-size: 12px;
+        }
+        .ant-checkbox-disabled + span {
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .ant-form-item-label {
+            min-width: 96px;
+        }
+        .editable-row-operations {
+            a {
+                color: #007ace;
+            }
+        }
+        .ant-table-bordered .ant-table-body > table {
+            border: none;
+        }
+    }
+}
+.template-code-add {
+    .template-item {
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 80px;
+        label {
+            min-width: 80px;
+            text-align: right;
+        }
+        input {
+            width: 220px;
+        }
+        span {
+            width: 220px;
+        }
+    }
+}

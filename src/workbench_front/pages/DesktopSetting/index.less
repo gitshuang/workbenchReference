@@ -1,0 +1,563 @@
+.nc-desktop-setting {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top:1px solid #eaeaea;
+    .nc-desktop-setting-content {
+        background: #ddd;
+        flex: 1;
+        .content-anchor {
+            padding-top: 2px;
+            margin-left: 1px;
+            width: calc(100vw - 380px);
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            left: 380px;
+            top: 45px;
+            position: fixed;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background: rgba(255,255,255,1);
+            .anchor {
+                margin-left: 5px;
+                padding: 0 10px;
+                height: 35px;
+                a {
+                    height: 32px;
+                    text-align: center;
+                    white-space: nowrap;
+                    color: #474d54;
+                }
+                a:hover {
+                    color: rgba(221, 55, 48, 1);
+                }
+                .active {
+                    color: rgba(221, 55, 48, 1);
+                    position: relative;
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background: rgba(221, 55, 48, 1);
+                            border-radius: 4px;
+                            position: relative;
+                            bottom: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        .nc-workbench-desktop-container {
+            padding: 5px 10px 20px;
+            margin-top: 40px;
+            height: calc(100vh - 142px);
+            overflow-y: auto;
+            .group-item-add {
+                width: 100%;
+                border: 1px solid rgba(78, 89, 104, 0.25);
+                background: #fff;
+            }
+            .group-item {
+                width: 100%;
+                margin-bottom: 10px;
+                cursor: move;
+                position: relative;
+                transition: all 0.2s ease-out;
+                min-width: 500px;
+                .group-item-container {
+                    padding: 5px 0 0 1px;
+                    .group-item-icon {
+                        font-size: 19px;
+                        margin-top: 3px;
+                    }
+                    .group-item-icon:hover {
+                        color: #111111;
+                    }
+                    .group-item-title-container-no-edit {
+                        display: flex;
+                        justify-content: space-between;
+                        background: #fff;
+                        border-radius: 3px;
+                        margin: 0 10px;
+                        i {
+                            cursor: pointer;
+                        }
+                        .title-left {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            .group-item-title {
+                                cursor: pointer;
+                                line-height: 22px;
+                                padding-left: 10px;
+                            }
+                            i {
+                                margin-left: 7px;
+                            }
+                        }
+                        .title-right {
+                            display: flex;
+                            .group-item-title-edit {
+                                margin-right: 5px;
+                            }
+                            .group-item-title-edit:hover {
+                                color: #111111;
+                            }
+                            .group-item-title-not-edit {
+                                color: #d4d4d4;
+                                margin-right: 7px;
+                            }
+                            .group-item-title-not-edit:hover {
+                                color: #111111;
+                            }
+                        }
+                    }
+                    #card-container {
+                        .card-shadow {
+                            background: rgba(204,207,221,1);
+                            position: absolute;
+                            border-radius: 3px;
+                            transition: all 0.2s ease-out;
+                        }
+                        .card {
+                            background: #fff;
+                            position: absolute;
+                            border: 1px solid #f1f1f1;
+                            border-radius: 3px;
+                            transition: all 0.2s ease-out;
+                            .card-mid {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                            .card-footer {
+                                display: flex;
+                                justify-content: space-between;
+                                position: absolute;
+                                height: 35px;
+                                width: 100%;
+                                padding: 7px 8px;
+                                bottom: 0;
+                                background: #f2f2f2;
+                                .card-delete {
+                                    font-size: 19px;
+                                    line-height: 23px;
+                                    cursor: pointer;
+                                }
+                                .card-delete:hover {
+                                    color: #111111;
+                                }
+                            }
+                        }
+                    }
+                }
+                .group-add {
+                    margin: 0 10px;
+                }
+            }
+            .group-item:last-child {
+                margin-bottom: calc(100vh - 468px);
+            }
+            .edit-group-item {
+                box-shadow: 0px 0px 6px #1890ff;
+            }
+        }
+        .nc-workbench-home-footer {
+            background: rgba(247,248,250,1);
+            width: calc(100vw - 380px);
+            height: 50px;
+            position: fixed;
+            left: 380px;
+            bottom: 0;
+            border-top: solid 1px #ccc;
+            // background: rgba(43, 55, 66, .6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // button {
+            //     margin: 0 8px;
+            // }
+            .footer-button {
+                color: #888;
+                border-color: rgba(255, 255, 255, 0.8);
+                background: #efefef;
+                border-radius: 5px;
+            }
+            .footer-button:hover {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+            .footer-left {
+                display: flex;
+                margin-left: 20px;
+                .footer-button {
+                    margin-right: 6px;
+                }
+            }
+            .footer-right {
+                display: flex;
+                margin-right: 20px;
+                button {
+                    margin-left: 6px;
+                }
+                .footer-button{
+                    color: #555;
+                }
+            }
+        }
+    }
+
+    .nc-workbench-home-sider {
+        background: #fff;
+        // overflow: auto;
+        .sider-content {
+            margin: 10px 5px 15px;
+            padding: 1px 8px 0;
+            // border: 1px solid rgba(204, 204, 204, 1);
+            .sider-search {
+                display: flex;
+                align-items: center;
+                .search-input-icon {
+                    cursor: pointer;
+                }
+                .switch-search {
+                    margin-left: 10px;
+                    margin-right: 0;
+                    font-size: 20px;
+                    cursor: pointer;
+                    .left-icon-sousuo {
+                        font-size: 18px;
+                    }
+                }
+                .switch-search:hover {
+                    color: red;
+                }
+                .switch-search-cancel {
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+                span {
+                    input {
+                        padding-right: 45px;
+                        border-color: #ccc;
+                        box-shadow: none;
+                        border-left: none;
+                        border-right: none;
+                        border-top: none;
+                        border-radius: 0;
+                    }
+                    input:hover {
+                        border-color: #888888;
+                        box-shadow: none;
+                        border-left: none;
+                        border-right: none;
+                        border-top: none;
+                        border-radius: 0;
+                    }
+                }
+                span {
+                    i:hover {
+                        color: red;
+                    }
+                }
+                //左侧搜索输入框有文字时搜索变色
+                .sider-search-color {
+                    .ant-input-suffix {
+                        .ant-input-search-icon {
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .add-item {
+                padding: 5px;
+                margin: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: rgba(255,243,220,1);
+                height: 35px;
+                span {
+                    font-size: 12px;
+                    color: #DE6A1C;
+                }
+                .add {
+                    cursor: pointer;
+                    font-size: 19px;
+                }
+                .cannot-add {
+                    visibility: hidden;
+                }
+            }
+            .sider-result {
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: calc(100vh - 165px);
+                .no-result {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        // width: 35%;
+                        margin-top: 40px;
+                    }
+                }
+                .no-result-character {
+                    text-align: center;
+                    color: #aeaeae;
+                }
+                .result-group-list {
+                    // border-bottom: 1px solid #e9e9e9;
+                    .result-header {
+                        // padding-left: 5px;
+                        background: rgba(244, 245, 247, 1);
+                        height: 30px;
+                        line-height: 30px;
+                        label {
+                            padding: 0 4px 0 10px;
+                        }
+                        .result-header-name {
+                            cursor: pointer;
+                            height: 40px;
+                            display: inline-block;
+                            width: 305px;
+                            i {
+                                font-size: 12px;
+                                color: rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                    .result-app-list {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .app-col {
+                            width: 50%;
+                            .list-item {
+                                padding-left: 5px;
+                                margin-bottom: 4px;
+                                .list-item-content {
+                                    padding: 3px 4px;
+                                    border-bottom: 1px solid #fff;
+                                    border-top: 1px solid #fff;
+                                    border-left: 1px solid #fff;
+                                    border-right: 1px solid #fff;
+                                    height: 30px;
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    cursor: pointer;
+                                    .triangle-bottom-right {
+                                        border-bottom-right-radius: 3px;
+                                        border-color: transparent red red
+                                            transparent;
+                                        border-style: solid;
+                                        border-width: 4px 6px 6px 9px;
+                                        bottom: 0;
+                                        height: 0;
+                                        position: absolute;
+                                        right: 0;
+                                        width: 0;
+                                    }
+                                    //IE10
+                                    .title {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        width: 145px;
+                                        .title-name {
+                                            display: block;
+                                            max-width: 100%;
+                                            flex-shrink: 1;
+                                            font-size: 13px;
+                                            line-height: 14px;
+                                        }
+                                        
+                                    }
+                                    .isAddColor {
+                                        color: #007ACE;
+                                    }
+                                    .iconlocation {
+                                        position: absolute;
+                                        top: -5px;
+                                        right: -2px;
+                                        font-size: 16px;
+                                    }
+                                    .unSelect {
+                                        color: #fff;
+                                    }
+                                    
+                                }
+                                .list-item-content:hover{
+                                    border: 1px dashed #C2C2C2;
+                                    .unSelect {
+                                        color: #ccc
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sider-content-height {
+            position: relative;
+            z-index: 50;
+        }
+    }
+}
+.desk-setting-layer {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    left: -20px;
+    top: -20px;
+    .desk-setting-layer-card-list {
+        .layer-card {
+            width: 135px;
+            height: 135px;
+            border: 1px solid rgba(204, 204, 204, 1);
+            background: #fff;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .layer-card-span {
+                position: absolute;
+                // top:-15px;
+                // left:-15px;
+                background: #fe4343;
+                color: #fff;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+    }
+}
+/* 调整搜索框里面的样式 */
+.sider-search {
+    .search-cascader {
+        span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #111111;
+        }
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(208,208,208,1);
+            border-radius: 0;
+        }
+    }
+}
+//左侧搜索树清空图标样式
+.fixed-search-input {
+    .ant-input-suffix {
+        .fixed-search-icon-group {
+            .icon-qingkong {
+                display: none;
+                font-size: 12px;
+                padding-right: 3px; 
+            }
+        }
+    }
+    &:hover {
+        .ant-input-suffix {
+            .fixed-search-icon-group {
+                .icon-qingkong {
+                    display: inline-block;
+                    color: rgba(0,0,0,.25);
+                    font-size: 12px;
+                    padding-right: 3px; 
+                }
+                .icon-qingkong:hover {
+                    color: #999999;
+                    font-size: 12px;
+                    padding-right: 3px; 
+                }
+            }
+        }
+    }
+}
+/* 使用 css 技巧来动态设置的对话框位置 */
+.desk-setting-vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desk-setting-vertical-center-modal .ant-modal {
+    top: 0;
+}
+// sider区域的弹出浮层
+.desk-setting-cascader-popup{
+	.ant-cascader-menu{
+		height:340px;
+	}
+}
+//模态框内redio样式
+.modal-radio-group{
+    .modal-radio{
+        margin-bottom: 10px;
+    }
+}
+//全部展开、全部收起
+.ant-dropdown {
+    ul.ant-dropdown-menu {
+        padding: 0;
+        li.ant-dropdown-menu-item {
+            padding: 0;
+            button {
+                text-align-last: center;
+                font-size: 13px;
+                border: 0;
+                background-color: inherit;
+                width: 100%;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                &:focus {
+                    border: none;
+                }
+            }
+            button:disabled {
+                color: #ccc;
+            }
+            button:hover {
+                background-color: inherit;
+            }
+        }
+        .all_expand {
+            border-bottom: 1px solid #e8e8e8;
+        }
+        li.ant-dropdown-menu-item:hover {
+            background-color: rgba(244,245,247,1);
+        }
+    }
+}
+//全部展开，全部收起
+.allExpand {
+    cursor: pointer;
+    font-weight: bold;
+}
+.allPack {
+    cursor: not-allowed
+}
+//sider左侧下拉
+.desk-setting-cascader-popup {
+    .ant-cascader-menu {
+        width: 145px;
+        li:hover {
+            background: #f5f5f5;
+        }
+    }
+}

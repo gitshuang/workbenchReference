@@ -1,0 +1,96 @@
+.n-tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 50px;
+    z-index: 100;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    li {
+        // height: 100%;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        display: inline;//ie浏览器下li不是块级不占空间的问题
+        a {
+            cursor: pointer;
+            color: #555555;
+            white-space: nowrap;
+            user-select: none;
+            &:hover {
+                color: #e14c46;
+            }
+        }
+        .active {
+            color: #e14c46;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            span {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: #e14c46;
+                height: 2px;
+                // &::after {
+                // 	content: '';
+                // 	display: block;
+                // 	width: 14px;
+                // 	height: 6px;
+                // 	background: #ee5c48;
+                // }
+            }
+        }
+    }
+}
+/**
+* 首页tabs样式
+*/
+.nc-workbench-layout {
+    overflow-x: hidden;
+    .nccwb-header {
+        .nccwb-header-info {
+            .tabs-layout {
+                display: flex;
+                margin-left: 80px;
+                .tabs-page {
+                    width: calc(100vw - 300px);
+                    position: relative;
+                    overflow: hidden;
+                    height: 27px;
+                }
+                .tabs-icon {
+                    display: flex;
+                    align-items: center;
+                    width: 22px;
+                    margin-left: 18px;
+                    span {
+                        cursor: pointer;
+                        .iconfont {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .ant-tabs-line {
+                    .ant-tabs-content-animated {
+                            display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.marginLeft {
+    margin-left: -100%;
+}
+.iconfontColor {
+    color: #e8e8e8;
+    cursor: not-allowed;
+}

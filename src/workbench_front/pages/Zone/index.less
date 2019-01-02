@@ -1,0 +1,240 @@
+body {
+    background-color: #f0f2f5;
+}
+.nc-workbench-zone {
+    .ant-layout {
+        background-color: inherit;
+    }
+    .ant-layout-header {
+        height: 54px;
+        line-height: 54px;
+        padding: 0 20px;
+        background: #ffffff;
+        border-bottom: 1px solid #edecec;
+        align-items: center;
+        margin-bottom: 8px;
+        border-radius: 3px;
+    }
+    .from-card .ant-form-item {
+        display: flex;
+        .ant-input {
+            font-size: 13px;
+        }
+    }
+    .from-card .ant-form-item-control-wrapper {
+        flex: 1;
+    }
+    .margin-left-10 {
+        margin-left: 10px;
+    }
+    .ant-form-item-label {
+        min-width: 96px;
+        label {
+            &:after {
+                content: ' ';
+            }
+        }
+    }
+    .step {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        & > div {
+            width: 33%;
+        }
+    }
+    .myHead {
+        border-radius: 3px 3px 0 0;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #fff;
+        padding: 0 20px;
+        border-bottom: 1px solid #ccc;
+        .zone-title {
+            span {
+                font-size: 16px;
+                color: #111;
+            }
+        }
+        .button-components {
+            align-items: center;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    .from-card {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 8px;
+        border-radius: 0 0 3px 3px;
+    }
+    .zoneTable-container {
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    .my-editable-cell-text-wrapper {
+        display: flex;
+        align-items: center;
+        .cell-show-value {
+            max-width: 78px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+        }
+    }
+    .editable-cell-icon-check {
+        line-height: 28px;
+    }
+    .template-setting-steps {
+        margin-left: 19%;
+        margin-right: 19%;
+        height: 50px;
+        .ant-steps-item-title:after {
+            background-color: rgba(204, 204, 204, 1);
+        }
+        .ant-steps {
+            margin-top: 5px;
+            .ant-steps-item-process {
+                .ant-steps-item-description {
+                    font-size: 12px;
+                }
+                .ant-steps-item-icon {
+                    height: 20px;
+                    line-height: 20px;
+                    width: 20px;
+                    background: #fff;
+                    border: 1px solid #e14c46;
+                    border-radius: 20px;
+                    span {
+                        color: #e14c46;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .ant-steps-item-wait {
+                .ant-steps-item-icon {
+                    height: 20px;
+                    line-height: 20px;
+                    width: 20px;
+                    background: #fff;
+                    border: 1px solid rgba(191, 191, 191, 1);
+                    span {
+                        color: rgba(191, 191, 191, 1);
+                    }
+                }
+            }
+        }
+    }
+    .required-tableCell {
+        .my-editable-cell-text-wrapper::before {
+            content: "*";
+            color: red;
+            margin-right: 5px;
+        }
+        .my-editable-cell-text-wrapper span {
+            width: 80%;
+            display: inline-block;
+        }
+        .editable-cell-input-wrapper {
+            width: 80%;
+        }
+    }
+    //table的css样式
+    .ant-table-wrapper {
+        .ant-table-tbody > tr,
+        .ant-table-thead > tr {
+            height: 40px;
+            span {
+                font-size: 13px;
+                color: #666;
+            }
+            th {
+                line-height: 40px;
+                padding: 0px 8px !important;
+            }
+            th:nth-last-child(1) {
+                padding: 10px 9px 10px 30px;
+            }
+            td {
+                padding: 0px 8px !important;
+                box-sizing: border-box;
+                line-height: 40px;
+                vertical-align: middle;
+            }
+            .editable-cell-input-wrapper,
+            .editable-cell-text-wrapper {
+                padding-right: 0;
+            }
+            .operationArea {
+                padding-right: 10px;
+                span {
+                    a {
+                        color: #007ace;
+                    }
+                }
+                span.copyBtn {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    //表格上方按钮样式
+    .table-button-title {
+        margin: 0;
+        height: 40px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 0 20px;
+        .ant-btn {
+            margin: 0;
+        }
+        button:nth-child(n) {
+            margin-left: 6px;
+        }
+        .info {
+            color: #888;
+            display: flex;
+            font-size: 13px;
+            height: 30px;
+            justify-content: flex-start;
+            margin-right: 15px;
+            line-height: 30px;
+        }
+    }
+    tr.drop-over-downward td {
+        border-bottom: 2px dashed #1890ff;
+    }
+    tr.drop-over-upward td {
+        border-top: 2px dashed #1890ff;
+    }
+}
+.ant-modal-body {
+    label {
+        margin-right: 15px;
+    }
+    .areaName-item,
+    .areaCode-item {
+        position: relative;
+        .ant-input {
+            width: 80%;
+        }
+        margin-bottom: 20px;
+    }
+    .areaName-errorMsg,
+    .areaCode-errorMsg {
+        color: #f5222d;
+        font-size: 13px;
+        position: absolute;
+        top: 30px;
+        left: 65px;
+    }
+}
+.has-error {
+    border-color: #f5222d;
+}

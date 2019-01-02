@@ -1,0 +1,24 @@
+.workbench-breadcrumb {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .ant-breadcrumb {
+        color: #717478;
+        & > span {
+            cursor: pointer;
+            &:not(:first-child) {
+                cursor: default;
+            }
+        }
+        .ant-breadcrumb-link {
+            font-size: 12px;
+        }
+        & > span:first-child:hover {
+            color: #e14c46;
+        }
+        & > span:last-child {
+            color: #333333;
+        }
+    }
+}

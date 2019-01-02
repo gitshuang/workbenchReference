@@ -1,0 +1,100 @@
+.workbench-ExtraFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    .btn {
+        color: #1878ff;
+        cursor: pointer;
+    }
+}
+.nc-workbench-businessdate-dropdown {
+    display: flex;
+    justify-items: center;
+    .rc-calendar-footer{
+        padding: 9px 0;
+    }
+    .rc-calendar-clear-btn {
+        display: none;
+    }
+    .u-input-group {
+        .u-form-control {
+            width: 105px;
+            border: none;
+        }
+    }
+    .u-input-group.simple .u-form-control:not(:last-child) {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+    .datepicker-input-group.u-input-group .u-input-group-btn {
+        height: 28px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 1px !important;
+        left: 0;
+        .iconfont {
+            font-size: 18px;
+        }
+    }
+}
+.nc-workbench-businessdate {
+    .u-input-group {
+        .u-form-control {
+            color: #424242;
+            height: 28px;
+        }
+    }
+    .ant-calendar-picker-input {
+        width: 110px;
+        padding: 4px 0 4px 20px;
+        border: none;
+        cursor: pointer;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .business-date-block {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 30px;
+        top: 50%;
+        margin-top: -15px;
+    }
+    .business-date-mask {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 290;
+    }
+    .rc-calendar-picker-icon {
+        left: 0;
+    }
+    .u-input-group {
+        .u-form-control {
+            color: rgb(66, 66, 66);
+        }
+    }
+    &.unbusinessdate {
+        .u-input-group {
+            .u-form-control {
+                color: rgb(255, 97, 0);
+            }
+        }
+        .business-date-flag {
+            position: absolute;
+            color: #ff6100;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            line-height: 40px;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.all-apps-popover {
+    .ant-popover-inner-content {
+        padding: 0;
+    }
+}
+.all-apps-layout {
+    display: flex;
+    flex-flow: row;
+    width: calc(100vw - 255px);
+    height: calc(100vh - 150px);
+    .sider {
+        padding-top: 10px;
+        width: 290px;
+        overflow-y: auto;
+        background: #fff;
+        border-right: 1px solid #d9d9d9;
+        .result-group-list {
+            .result-header {
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                margin: 10px 20px 0 25px;
+                border-bottom: 1px solid #e8e8e8;
+                padding-bottom: 3px;
+                .result-header-name {
+                    font-size: 13px;
+                    font-family: MicrosoftYaHei;
+                    color: rgba(17,17,17,1);
+                }
+            }
+            .result-app-list {
+                width: 100%;
+                padding: 3px 20px 0 20px;
+                display: flex;
+                flex-wrap: wrap;
+                .app-col {
+                    width: 50%;
+                    .list-item {
+                        .list-item-content {
+                            cursor: pointer;
+                            height: 30px;
+                            // border-bottom: 1px solid #e8e8e8;
+                            border-radius: 1px;
+                            display: flex;
+                            align-items: center;
+                            margin-left: 5px;
+                            .title {
+                                line-height: 15px;
+                                span {
+                                    font-size: 13px;
+                                    font-family: MicrosoftYaHei;
+                                    color: rgba(85,85,85,1);
+                                }
+                            }
+                            .title.active span {
+                                color: red;
+                            }
+                            // .img {
+                            //     height: 120px;
+                            //     background-size: contain;
+                            //     border-top: solid 1px #ccc;
+                            // }
+                        }
+                        .list-item-content:hover {
+                            .title span {
+                                color: red;
+                            }
+                        }
+                        .list-item-content.active {
+                            color: red;
+                            border-bottom: 1px solid red;
+                        }
+                    }
+                }
+                .app-col:nth-child(odd) {
+                    padding-right: 5px;
+                }
+                .app-col:nth-child(even) {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    .content {
+        padding-left: 30px;
+        // padding-right: 69px;
+        padding-top: 20px;
+        overflow-y: auto;
+        flex: 1;
+        background: #fff;
+        .content-item {
+            .content-item-header {
+                padding-bottom: 3px;
+                border-bottom: 1px solid #e8e8e8;
+                font-size: 13px;
+                font-family: MicrosoftYaHei;
+                color:rgba(17,17,17,1);
+                margin-right: 30px;
+            }
+            .content-item-content {
+                display: flex;
+				flex-wrap: wrap;
+				margin-right: 20px;
+				// margin-top: 16px;
+                margin-bottom: 16px;
+                .item-app {
+					margin-top: 10px;
+                    width: 25%;
+                    a {
+                        font-size: 13px;
+                        font-family: MicrosoftYaHei;
+                        color:rgba(85,85,85,1);
+                    }
+                    a:hover {
+                        color: red;
+                    }
+                }
+                @media screen and (max-width:1280px ) {
+                    .item-app{
+                        width:33.3%;
+                    }
+                }
+            }
+        }
+    }
+}

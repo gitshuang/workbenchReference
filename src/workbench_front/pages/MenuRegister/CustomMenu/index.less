@@ -1,0 +1,71 @@
+.treetransfer-modal {
+    .margin-top-8 {
+        margin-top: 8px;
+    }
+    .margin-top-25 {
+        margin-top: 25px;
+    }
+    .ant-modal-body {
+        padding: 8px;
+    }
+    .tree-transfer-container {
+        display: flex;
+        flex-direction: row;
+        .tree-transfer-left,
+        .tree-transfer-right {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .tree-transfer-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            .ant-btn {
+                padding: 0;
+                width: 32px;
+                height: 32px;
+                border-radius: 3px;
+                &::after{
+                    display: none !important;
+                }
+            }
+            .iconfont {
+                font-size: 12px;
+            }
+            .transfer-right-double,
+            .transfer-left-double {
+                position: relative;
+                .transfer-icon-1,
+                .transfer-icon-2 {
+                    position: absolute;
+                }
+                .transfer-icon-1 {
+                    top: 7px;
+                    left: 6px;
+                }
+                .transfer-icon-2 {
+                    top: 7px;
+                    right: 6px;
+                }
+            }
+        }
+        .menutree-container {
+            width: 370px;
+            height: 420px;
+            border: 1px solid #d0d0d0;
+            border-radius: 3px;
+            background: #ffffff;
+            .title {
+                padding: 6px 15px;
+                font-size: 13px;
+                color: #111111;
+                background: #f3f3f3;
+            }
+            .menutree-content{
+                height: 385px;
+            }
+        }
+    }
+}
